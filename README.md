@@ -3,14 +3,15 @@ WASM processor unit that combines CPU + GPU + NPU features.
 
 <table width=100%>
 <tr>
+<td></td>
 <td>Processor unit</td>
 <td>Technology</td>
 <td>Interface</td>
 <td>Threading</td>
-<td rowspan=4 border=1 align=center>WPU</td>
 </tr>
 
 <tr>
+<td rowspan=3 border=1 align=center>WPU</td>
 <td>CPU</td>
 <td>SIMD over Wasm</td>
 <td>WebAssembly</td>
