@@ -1,2 +1,2 @@
-# wpu 
-WASM processor unit to combine CPU + GPU + NPU
+# wpu / enhanced SIMD
+WASM processor unit that combines CPU + GPU + NPU features. 
