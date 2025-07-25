@@ -11,7 +11,7 @@ WASM processor unit that combines CPU + GPU + NPU features.
 
 <tr>
 <td>CPU</td>
-<td>SIMD</td>
+<td>SIMD over Wasm</td>
 <td>WebAssembly</td>
 <td>CPU Core(s) Count</td>
 </tr>
