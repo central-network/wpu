@@ -4,7 +4,7 @@
 
     (start $main
         (log<ref.i32> 
-            (text "merhaba özgür")
+            (text "merhaba özgür, bilgisayarın işlemci çekirdeği sayısı:")
             global($self.navigator.hardwareConcurrency)
         )
     )
