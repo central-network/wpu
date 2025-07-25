@@ -6,12 +6,14 @@ WASM processor unit that combines CPU + GPU + NPU features.
 <td>Processor unit</td>
 <td>Technology</td>
 <td>Interface</td>
+<td>Threading</td>
 </tr>
 
 <tr>
 <td>CPU</td>
-<td>SIMD distrubution on Workers</td>
+<td>SIMD</td>
 <td>WebAssembly</td>
+<td>Worker x hardwareConcurrency</td>
 </tr>
 
 
@@ -19,6 +21,7 @@ WASM processor unit that combines CPU + GPU + NPU features.
 <td>GPU</td>
 <td>Compute Shader</td>
 <td>WebGPU</td>
+<td>Main Thread</td>
 </tr>
 
 
@@ -26,6 +29,7 @@ WASM processor unit that combines CPU + GPU + NPU features.
 <td>NPU</td>
 <td>Tensor</td>
 <td>WebNN</td>
+<td>Main Thread</td>
 </tr>
 
 
