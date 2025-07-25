@@ -1,4 +1,5 @@
-(module
+;;compile with github:central-network/wat4wasm
+(module 
     (memory 10 10)
     (global $self.navigator.hardwareConcurrency i32)
 

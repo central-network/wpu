@@ -1,0 +1,23 @@
+{
+  "name": "wpu",
+  "version": "1.0.0",
+  "description": "WASM processor unit to combine CPU + GPU + NPU",
+  "homepage": "https://github.com/central-network/wpu#readme",
+  "bugs": {
+    "url": "https://github.com/central-network/wpu/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/central-network/wpu.git"
+  },
+  "license": "ISC",
+  "author": "Özgür Fırat Özpolat",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "wat4wasm": "github:central-network/wat4wasm"
+  }
+}
