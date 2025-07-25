@@ -7,6 +7,7 @@ WASM processor unit that combines CPU + GPU + NPU features.
 <td>Technology</td>
 <td>Interface</td>
 <td>Threading</td>
+<td rowspan=4>WPU</td>
 </tr>
 
 <tr>
