@@ -29,7 +29,7 @@ WASM processor unit that combines CPU + GPU + NPU features.
 
 <tr>
 <td>NPU</td>
-<td>Tensor</td>
+<td>Tensor Ops.</td>
 <td>WebNN</td>
 <td>Single Thread</td>
 </tr>
