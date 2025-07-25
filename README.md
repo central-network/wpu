@@ -21,7 +21,7 @@ WASM processor unit that combines CPU + GPU + NPU features.
 <td>GPU</td>
 <td>Compute Shader</td>
 <td>WebGPU</td>
-<td>Main Thread</td>
+<td>GPU's Workgroup Count</td>
 </tr>
 
 
@@ -29,7 +29,7 @@ WASM processor unit that combines CPU + GPU + NPU features.
 <td>NPU</td>
 <td>Tensor</td>
 <td>WebNN</td>
-<td>Main Thread</td>
+<td>Single Threading</td>
 </tr>
 
 
