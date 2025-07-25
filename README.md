@@ -13,7 +13,7 @@ WASM processor unit that combines CPU + GPU + NPU features.
 <td>CPU</td>
 <td>SIMD</td>
 <td>WebAssembly</td>
-<td>CPU's Core(s) Count</td>
+<td>CPU Core(s) Count</td>
 </tr>
 
 
@@ -21,7 +21,7 @@ WASM processor unit that combines CPU + GPU + NPU features.
 <td>GPU</td>
 <td>Compute Shader</td>
 <td>WebGPU</td>
-<td>GPU's Workgroup(s) Count</td>
+<td>GPU Workgroup(s) Count</td>
 </tr>
 
 
