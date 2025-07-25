@@ -1,6 +1,6 @@
 # WPU 
 ## Enhanced SIMD
-WASM processor unit that combines CPU + GPU + NPU features. 
+WASM processor unit to combine CPU + GPU + NPU features over browser's available features. 
 
 <table width=100%>
 <tr>
