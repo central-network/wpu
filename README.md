@@ -17,7 +17,7 @@ WASM processor unit that combines CPU + GPU + NPU features.
 <td>SIMD over wasm</td>
 <td>WebAssembly</td>
 <td>CPU Core(s) Count</td>
-<td>
+<td align=center>
 <a target="_blank" href="https://www.w3.org/TR/2019/REC-wasm-web-api-1-20191205/">W3C</a>
 </td>
 </tr>
@@ -28,7 +28,7 @@ WASM processor unit that combines CPU + GPU + NPU features.
 <td>Compute Shader</td>
 <td>WebGPU</td>
 <td>GPU Workgroup(s) Count</td>
-<td>
+<td align=center>
 <a target="_blank" href="https://www.w3.org/TR/webgpu/">W3C</a>
 </td>
 </tr>
@@ -39,7 +39,7 @@ WASM processor unit that combines CPU + GPU + NPU features.
 <td>Tensor Ops.</td>
 <td>WebNN</td>
 <td>Single Thread</td>
-<td>
+<td align=center>
 <a target="_blank" href="https://www.w3.org/TR/webnn/">W3C</a>
 </td>
 
