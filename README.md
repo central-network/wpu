@@ -18,7 +18,7 @@ WASM processor unit that combines CPU + GPU + NPU features.
 <td>WebAssembly</td>
 <td>CPU Core(s) Count</td>
 <td>
-<a href="https://www.w3.org/TR/2019/REC-wasm-web-api-1-20191205/">W3C</a>
+<a target="_blank" href="https://www.w3.org/TR/2019/REC-wasm-web-api-1-20191205/">W3C</a>
 </td>
 </tr>
 
@@ -29,7 +29,7 @@ WASM processor unit that combines CPU + GPU + NPU features.
 <td>WebGPU</td>
 <td>GPU Workgroup(s) Count</td>
 <td>
-<a href="https://www.w3.org/TR/webgpu/">W3C</a>
+<a target="_blank" href="https://www.w3.org/TR/webgpu/">W3C</a>
 </td>
 </tr>
 
@@ -40,7 +40,7 @@ WASM processor unit that combines CPU + GPU + NPU features.
 <td>WebNN</td>
 <td>Single Thread</td>
 <td>
-<a href="https://www.w3.org/TR/webnn/">W3C</a>
+<a target="_blank" href="https://www.w3.org/TR/webnn/">W3C</a>
 </td>
 
 </tr>
