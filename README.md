@@ -1,13 +1,13 @@
 # wpu / enhanced SIMD
 WASM processor unit that combines CPU + GPU + NPU features. 
 
-<table>
+<table width=100%>
 <tr>
-<td>Processor unit</td>
-<td>Technology</td>
-<td>Interface</td>
-<td>Threading</td>
-<td rowspan=4 border=1 align=center width=25%>
+<td width=15%>Processor unit</td>
+<td width=15%>Technology</td>
+<td width=15%>Interface</td>
+<td width=15%>Threading</td>
+<td rowspan=4 border=1 align=center width=40%>
 &nbsp;WPU&nbsp;
 </td>
 </tr>
