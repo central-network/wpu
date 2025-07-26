@@ -13,13 +13,12 @@
             )
         )
 
-        (warn<refx4> 
-            (text "hello from instance!")
-            global($memory)
-            global($memory.buffer)
-            global($memory.uInt8Array)
-        )
-
         (call $self.postMessage<ref> null)
+    )
+
+    (on $message 
+        (param $event externref)
+
+        (warn<ref> this)
     )
 )

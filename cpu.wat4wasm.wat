@@ -13,10 +13,11 @@
     (import "self" "self"               (global $wat4wasm/self externref))
     (import "String" "fromCharCode"     (global $wat4wasm/String.fromCharCode externref))
    
+	(import "Reflect" "set" (func $self.Reflect.set<ref.ref.fun> (param externref externref funcref)))
 	(import "Reflect" "construct" (func $self.Reflect.construct<refx2>ref (param externref externref) (result externref)))
 	(import "Array" "of" (func $self.Array.of<ref>ref (param externref) (result externref)))
-	(import "console" "warn" (func $self.console.warn<refx4> (param externref externref externref externref)))
 	(import "self" "postMessage" (func $self.postMessage<ref> (param externref)))
+	(import "console" "warn" (func $self.console.warn<ref> (param externref)))
 	 
 
     (import "self" "memory" (memory $memory 10 10 shared))
@@ -26,15 +27,15 @@
     (global $memory.uInt8Array (mut externref) ref.null extern)
 
     (start $main) (func $main
-        (table.set $extern (i32.const 1) (call $wat4wasm/text (i32.const 0) (i32.const 80)))
-		(table.set $extern (i32.const 2) (call $wat4wasm/text (i32.const 80) (i32.const 48)))
-		(table.set $extern (i32.const 3) (call $wat4wasm/text (i32.const 128) (i32.const 36)))
-		(table.set $extern (i32.const 4) (call $wat4wasm/text (i32.const 164) (i32.const 16)))
-		(table.set $extern (i32.const 5) (call $wat4wasm/text (i32.const 180) (i32.const 12)))
-		(table.set $extern (i32.const 6) (call $wat4wasm/text (i32.const 192) (i32.const 40)))    
+        (table.set $extern (i32.const 1) (call $wat4wasm/text (i32.const 0) (i32.const 36)))
+		(table.set $extern (i32.const 2) (call $wat4wasm/text (i32.const 36) (i32.const 48)))
+		(table.set $extern (i32.const 3) (call $wat4wasm/text (i32.const 84) (i32.const 36)))
+		(table.set $extern (i32.const 4) (call $wat4wasm/text (i32.const 120) (i32.const 16)))
+		(table.set $extern (i32.const 5) (call $wat4wasm/text (i32.const 136) (i32.const 12)))
+		(table.set $extern (i32.const 6) (call $wat4wasm/text (i32.const 148) (i32.const 40)))    
     
         
-        (memory.fill (i32.const 0) (i32.const 0) (i32.const 232))
+        (memory.fill (i32.const 0) (i32.const 0) (i32.const 188))
             
     
             
@@ -63,6 +64,14 @@
             )
         )
             
+    
+        
+        (call $self.Reflect.set<ref.ref.fun>
+            (global.get $wat4wasm/self)
+            (table.get $extern (i32.const 1))
+            (ref.func $self.onmessage)
+        )
+            
      
 
         (global.set $memory.uInt8Array
@@ -73,14 +82,13 @@
             ))
         )
 
-        (call $self.console.warn<refx4> 
-            (table.get $extern (i32.const 1))
-            (global.get $memory)
-            (global.get $memory.buffer)
-            (global.get $memory.uInt8Array)
-        )
-
         (call $self.postMessage<ref> (ref.null extern))
+    )
+
+    (func $self.onmessage  
+        (param $event externref)
+
+        (call $self.console.warn<ref> (local.get 0))
     )
 
 	(global $self.MessageEvent.prototype.data/get (mut externref) ref.null extern)
@@ -89,7 +97,7 @@
 	(global $self.Uint8Array (mut externref) ref.null extern)
 
 
-	
+	(elem $wat4wasm/refs funcref (ref.func $self.onmessage))
 
     (table $extern 7 7 externref)
 
@@ -135,5 +143,5 @@
         )
     )
 
-    (data (i32.const 0) "\00\00\d0\42\00\00\ca\42\00\00\d8\42\00\00\d8\42\00\00\de\42\00\00\00\42\00\00\cc\42\00\00\e4\42\00\00\de\42\00\00\da\42\00\00\00\42\00\00\d2\42\00\00\dc\42\00\00\e6\42\00\00\e8\42\00\00\c2\42\00\00\dc\42\00\00\c6\42\00\00\ca\42\00\00\04\42\00\00\9a\42\00\00\ca\42\00\00\e6\42\00\00\e6\42\00\00\c2\42\00\00\ce\42\00\00\ca\42\00\00\8a\42\00\00\ec\42\00\00\ca\42\00\00\dc\42\00\00\e8\42\00\00\e0\42\00\00\e4\42\00\00\de\42\00\00\e8\42\00\00\de\42\00\00\e8\42\00\00\f2\42\00\00\e0\42\00\00\ca\42\00\00\c8\42\00\00\c2\42\00\00\e8\42\00\00\c2\42\00\00\ce\42\00\00\ca\42\00\00\e8\42\00\00\aa\42\00\00\d2\42\00\00\dc\42\00\00\e8\42\00\00\60\42\00\00\82\42\00\00\e4\42\00\00\e4\42\00\00\c2\42\00\00\f2\42")
+    (data (i32.const 0) "\00\00\de\42\00\00\dc\42\00\00\da\42\00\00\ca\42\00\00\e6\42\00\00\e6\42\00\00\c2\42\00\00\ce\42\00\00\ca\42\00\00\9a\42\00\00\ca\42\00\00\e6\42\00\00\e6\42\00\00\c2\42\00\00\ce\42\00\00\ca\42\00\00\8a\42\00\00\ec\42\00\00\ca\42\00\00\dc\42\00\00\e8\42\00\00\e0\42\00\00\e4\42\00\00\de\42\00\00\e8\42\00\00\de\42\00\00\e8\42\00\00\f2\42\00\00\e0\42\00\00\ca\42\00\00\c8\42\00\00\c2\42\00\00\e8\42\00\00\c2\42\00\00\ce\42\00\00\ca\42\00\00\e8\42\00\00\aa\42\00\00\d2\42\00\00\dc\42\00\00\e8\42\00\00\60\42\00\00\82\42\00\00\e4\42\00\00\e4\42\00\00\c2\42\00\00\f2\42")
 )
