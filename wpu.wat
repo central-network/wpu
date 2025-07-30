@@ -417,6 +417,8 @@
         (data   $cpu.wasm/buffer) 
         (global $cpu.wasm/byteLength i32)
     )
+
+    (data $cpu.wasm "file://cpu.wat" compile=1 headers=0)
 )
 
 
